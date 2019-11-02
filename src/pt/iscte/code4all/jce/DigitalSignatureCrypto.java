@@ -1,4 +1,4 @@
-package pt.iscte.code4all;
+package pt.iscte.code4all.jce;
 
 import java.security.*;
 import java.util.Base64;

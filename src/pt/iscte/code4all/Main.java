@@ -1,5 +1,7 @@
 package pt.iscte.code4all;
 
+import pt.iscte.code4all.jce.*;
+
 import java.security.KeyPair;
 import java.security.Provider;
 import java.security.Security;

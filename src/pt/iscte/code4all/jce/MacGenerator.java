@@ -1,4 +1,4 @@
-package pt.iscte.code4all;
+package pt.iscte.code4all.jce;
 
 import pt.iscte.code4all.Utils.HexConverter;
 

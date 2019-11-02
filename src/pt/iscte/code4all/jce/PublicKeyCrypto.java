@@ -1,4 +1,4 @@
-package pt.iscte.code4all;
+package pt.iscte.code4all.jce;
 
 import javax.crypto.Cipher;
 import java.security.KeyPair;
@@ -13,7 +13,7 @@ public class PublicKeyCrypto {
     public PublicKeyCrypto() {
     }
 
-    protected void generateKeyPair(int dimension) throws Exception {
+    public void generateKeyPair(int dimension) throws Exception {
         KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
         keyPairGenerator.initialize(dimension);
         keyPair = keyPairGenerator.generateKeyPair();
