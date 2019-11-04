@@ -1,5 +1,6 @@
 package pt.iscte.code4all.jce;
 
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import pt.iscte.code4all.jce.*;
 
 import java.security.KeyPair;
@@ -174,7 +175,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        // Security.addProvider(new BouncyCastleProvider());
+        //Security.addProvider(new BouncyCastleProvider());
         int option = 0;
         do {
             System.out.println();

@@ -12,7 +12,6 @@ import java.security.spec.KeySpec;
 import java.util.Base64;
 
 public class SecretKeyCrypto {
-    protected static String SALT = "ABCDEFGHIJKLMNOPQRST";
 
     public SecretKeyCrypto() {
     }
