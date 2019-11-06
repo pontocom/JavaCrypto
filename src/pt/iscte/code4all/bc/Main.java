@@ -1,12 +1,11 @@
 package pt.iscte.code4all.bc;
 
-import org.bouncycastle.asn1.ASN1Sequence;
-import org.bouncycastle.asn1.x500.X500Name;
-import org.bouncycastle.asn1.x509.SubjectPublicKeyInfo;
+import org.bouncycastle.cert.X509CertificateHolder;
+import org.bouncycastle.cert.jcajce.JcaX509CertificateConverter;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
-import org.bouncycastle.x509.X509V3CertificateGenerator;
 
 import java.security.*;
+import java.security.cert.X509Certificate;
 
 public class Main {
     public static void ListProviders() {
@@ -24,16 +23,12 @@ public class Main {
         ListProviders();
 
         try {
-            SecureRandom secureRandom = SecureRandom.getInstance("SHA1PRNG");
-            KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA", "BC");
-            keyPairGenerator.initialize(2048);
-            KeyPair keyPair = keyPairGenerator.generateKeyPair();
-            PublicKey RSAPublicKey = keyPair.getPublic();
-            PrivateKey RSAPrivateKey = keyPair.getPrivate();
+            KeyPair keyPair = Utils.generateKeyPair(2048);
+            X509CertificateHolder holder = DigitalCertificate.createTrustAnchor(keyPair, "SHA256withRSA");
+            X509Certificate certificate = new JcaX509CertificateConverter().setProvider("BC").getCertificate(holder);
 
-            X500Name subjectDN = new X500Name("CN = carlos.serrao@iscte.pt");
-            SubjectPublicKeyInfo subjectPublicKeyInfo = SubjectPublicKeyInfo.getInstance(ASN1Sequence.getInstance(RSAPublicKey.getEncoded()));
 
+            System.out.println(certificate.getEncoded().toString());
             
         } catch (Exception e) {
             System.out.println(e.getMessage());

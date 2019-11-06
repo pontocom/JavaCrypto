@@ -2,6 +2,11 @@
   <library name="bcprov-ext-jdk15on-164">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/bc/bcprov-ext-jdk15on-164.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bc/bctls-jdk15on-164.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bc/bcpg-jdk15on-164.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bc/bcpkix-jdk15on-164.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bc/bcmail-jdk15on-164.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bc/bcprov-jdk15on-164.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
