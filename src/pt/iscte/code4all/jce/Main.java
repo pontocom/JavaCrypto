@@ -175,7 +175,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        //Security.addProvider(new BouncyCastleProvider());
+        Security.addProvider(new BouncyCastleProvider());
         int option = 0;
         do {
             System.out.println();

@@ -1,10 +1,21 @@
+/**
+ * Playing with the Ceaser Cipher
+ */
 package pt.iscte.code4all;
 
 import java.util.Scanner;
 
+/**
+ * Class to cipher and decipher with the Ceaser
+ */
 public class CeaserCipher {
     private static char[] alphabet = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
 
+    /**
+     * Util method to find a character inside the alphabet
+     * @param c Character to find
+     * @return Returns the position of the character inside the alphabet
+     */
     private static int find(char c) {
         for(int n=0; n < alphabet.length; n++) {
             if(alphabet[n] == c) {
@@ -14,6 +25,12 @@ public class CeaserCipher {
         return 0;
     }
 
+    /**
+     * Method that ciphers a message using the Ceaser Cipher according to a selected key
+     * @param message The message to cipher
+     * @param key The key to be used
+     * @return A String object with the ciphertext
+     */
     public static String cipher(String message, int key) {
         char[] umessage = message.toUpperCase().toCharArray();
         char[] ciphertext = new char[umessage.length];
@@ -34,6 +51,12 @@ public class CeaserCipher {
         return new String(ciphertext);
     }
 
+    /**
+     *
+     * @param cipher
+     * @param key
+     * @return
+     */
     public static String decipher(String cipher, int key) {
         char[] ccipher = cipher.toCharArray();
         char[] plaintext = new char[ccipher.length];
