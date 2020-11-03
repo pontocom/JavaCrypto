@@ -27,12 +27,12 @@ public class CeaserCipher {
 
     /**
      * Method that ciphers a message using the Ceaser Cipher according to a selected key
-     * @param message The message to cipher
+     * @param plaintext The message to cipher
      * @param key The key to be used
      * @return A String object with the ciphertext
      */
-    public static String cipher(String message, int key) {
-        char[] umessage = message.toUpperCase().toCharArray();
+    public static String cipher(String plaintext, int key) {
+        char[] umessage = plaintext.toUpperCase().toCharArray();
         char[] ciphertext = new char[umessage.length];
 
         for(int p = 0; p < umessage.length; p++) {
@@ -52,13 +52,13 @@ public class CeaserCipher {
     }
 
     /**
-     *
-     * @param cipher
-     * @param key
-     * @return
+     * Method that deciphers a message using the Ceaser Cipher according to a selected key
+     * @param ciphertext The message to cipher
+     * @param key The key to be used
+     * @return A String object with the plaintext
      */
-    public static String decipher(String cipher, int key) {
-        char[] ccipher = cipher.toCharArray();
+    public static String decipher(String ciphertext, int key) {
+        char[] ccipher = ciphertext.toCharArray();
         char[] plaintext = new char[ccipher.length];
 
         for(int p = 0; p < ccipher.length; p++) {

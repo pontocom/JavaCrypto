@@ -125,7 +125,7 @@ public class Main {
             //Encrypting a message with a key pair - encrypting with public-key
             System.out.println("Starting ENCRYPTION...");
             PublicKeyCrypto publicKeyCrypto = new PublicKeyCrypto();
-            publicKeyCrypto.generateKeyPair(2048);
+            publicKeyCrypto.generateKeyPair(4096);
             byte[] encryptedMsg = publicKeyCrypto.cipherWithPublicKey(message);
 
             System.out.println("Encrypted result (raw): " + new String(encryptedMsg));

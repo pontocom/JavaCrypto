@@ -27,8 +27,8 @@ public class Main {
             X509CertificateHolder holder = DigitalCertificate.createTrustAnchor(keyPair, "SHA256withRSA");
             X509Certificate certificate = new JcaX509CertificateConverter().setProvider("BC").getCertificate(holder);
 
-
-            System.out.println(certificate.getEncoded().toString());
+            System.out.println("CERTIFICATE = ");
+            System.out.println(certificate.toString());
             
         } catch (Exception e) {
             System.out.println(e.getMessage());
