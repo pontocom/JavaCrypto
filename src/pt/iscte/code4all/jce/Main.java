@@ -153,7 +153,7 @@ public class Main {
 
             //Read a message to sign
             Scanner sc = new Scanner(System.in);
-            System.out.println("Enter message to cipher: ");
+            System.out.println("Enter message to sign: ");
             String message = sc.nextLine();
 
             //Sign the message with the private key
