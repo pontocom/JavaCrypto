@@ -19,7 +19,7 @@ public class MacGenerator {
     }
 
     public String generateMac(String message) throws Exception {
-        KeyGenerator keyGenerator = KeyGenerator.getInstance("DES");
+        KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
         SecureRandom secureRandom = new SecureRandom();
         keyGenerator.init(secureRandom);
         Key key = keyGenerator.generateKey();
